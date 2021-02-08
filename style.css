@@ -1,10 +1,11 @@
 body {
-font-family: "poppins", sans-serif;
-background-image: url(./images/bg-intro-desktop.png);
-background-color: hsl(0, 100%, 74%);
-background-size: cover;
-width: 100%;
-height: 100vh;
+    font-family: "poppins", sans-serif;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -29,7 +30,7 @@ height: 100vh;
 }
 
 .judul_konten p {
-    font-size: 0.9rem;
+    font-size: 1.1em;
 }
 
 .form_konten {
@@ -43,16 +44,18 @@ height: 100vh;
     display: inline-block;
     width: 100%;
     background-color: hsl(248, 32%, 49%);
-    font-size: 16px;
+    font-size: 1em;
     text-decoration: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
-    padding: 1rem 0;
     margin-bottom: 0.5rem;
     font-weight: 400;
     transition: box-shadow 0.25s ease-in-out;
     box-shadow: 0px 6px 0px rgba(96, 85, 165, 0.3);
+    height: 2em;
+    padding-top: 1.6em;
+    padding-bottom: 1em;
 }
 
 .form_konten a.btn-form-konten span{
@@ -70,8 +73,9 @@ height: 100vh;
     justify-content: space-evenly;
     background: white;
     margin: 1rem 0;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     box-shadow: 0px 6px 0px rgba(54, 44, 46, 0.3);
+    padding-top: 2em;
 }
 
 form {
@@ -86,32 +90,26 @@ form input {
     font-weight: 600;
     width: 85%;
     display: block;
-    height: 3rem;
+    height: 4rem;
     margin-top: 1rem;
     padding-left: 1rem;
     border-radius: 7px;
+    font-size: 1em;
 }
 
-.form-field {
-    
-    margin-left: 30px;
-    margin-right: 30px;
-    width: 410px;
-}
-
-.form-field input {
+form .form-field {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    width: 100%;
-    display: block;
+    display: contents;
     height: 3rem;
     margin-top: 1rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    padding-left: 1rem;
-    border: 1px solid #c7c7c7;
+    padding-left: 2.5em;
     border-radius: 7px;
+}
+
+.form-field input {
+    border: 1px solid #c7c7c7;
 }
 
  .form-field:focus {
@@ -150,8 +148,10 @@ form a {
     font-style: italic;
     display: block;
     text-align: right;
-    padding-top: 2px;
+    padding-top: 0.5em;
     font-size: 10px;
+    align-self: flex-end;
+    padding-right: 4.5em;
 }
 
 
@@ -161,12 +161,13 @@ form a {
     text-transform: uppercase;
     font-size: 20px;
     cursor: pointer;
-    font-weight: lighter;
+    font-weight: 400;
     border: none;
     border-radius: 7px;
     transition: all 0.25s ease-in-out;
     box-shadow: 0px 6px 0px rgb(34, 168, 110);
     margin-bottom: 1rem;
+    height: 3em;
   }
 
   .btn-submit:hover,
@@ -189,6 +190,117 @@ form a {
     
 }
 
+/**/
+/*for phones*/
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .judul_konten {
+        padding-right: 0;
+    }
+
+    .judul_konten h1 {
+        font-size: 1.7em;
+        margin-top: 2.5em;
+        margin-bottom: 0.8em;
+        font-weight: 600;
+    }
+
+    .judul_konten p {
+        line-height: 25px;
+        padding-bottom: 2.5em;
+        font-size: 12px;
+    }
 
 
+    .form_konten a.btn-form-konten {
+        display: grid;
+        font-size: 12px;
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
 
+    .form-field {
+        width: 285px;
+    }
+
+    .form-field input{
+        height: 3em;
+    }
+
+    form, input {
+        font-size: 12px;
+    }
+
+    .form-field.error input {
+        background-size: 1rem;
+    }
+
+    .form-field small {
+        font-size: 8px;
+    }
+
+    .btn-submit {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 13px 0;
+    }
+
+    .agree-term {
+        display: contents;
+    }
+
+    .agree-term a {
+        padding-bottom: 20px;
+    }
+
+    .attribution {
+        font-size: 9px;
+        padding-top: 50px;
+        padding-bottom: 15px;
+    }
+
+    /*for phones*/
+    @media only screen and (max-width: 450px) {
+        .form-field small {
+            padding-right: 3.7em;
+        }
+    }
+
+    /*for phones*/
+    @media only screen and (max-width: 375px) {
+        .form-field small {
+            padding-right: 3em;
+        }
+    }
+
+}
+
+
+/*for tablets*/
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .wrapper {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .judul_konten {
+        padding-right: 0;
+    }
+
+    .judul_konten h1 {
+        font-size: 3em;
+        font-weight: 600; 
+    }
+
+    .btn-submit {
+        font-weight: 400;
+    }
+}
